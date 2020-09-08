@@ -96,7 +96,7 @@
                  $dbconn = pg_connect("host=localhost dbname=Proyecto1CC6 user=postgres password=12345")
                  or die('No se ha podido conectar: ' . pg_last_error());
 
-                 $query = "SELECT estado from Envio WHERE codigo=$Codigo";
+                 $query = "SELECT estado from Envio WHERE codigo='$Codigo'";
                  $result = pg_query($query);
                  $estado =0;
                  while($line = pg_fetch_assoc($result)){
