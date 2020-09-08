@@ -29,7 +29,7 @@
 
     }else if(strtoupper($formato) == "JSON"){
         $est=0;
-        $query = "SELECT estado from Envio WHERE codigo=$orden AND tienda='$tienda'";
+        $query = "SELECT estado from Envio WHERE codigo='$orden' AND tienda='$tienda'";
         $result = pg_query($query);
         if(pg_num_rows($result) > 0){
         while($line = pg_fetch_assoc($result)){
