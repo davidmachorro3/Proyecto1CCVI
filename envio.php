@@ -11,7 +11,7 @@ if(strlen($codigo) == 0 || strlen($destino) == 0 || strlen($destinatario) == 0 |
 	die("Faltan datos de envio");
 }
 
-$dbconn = pg_connect("host=localhost dbname = proyecto1cc6 user=postgres password = 12345");
+$dbconn = pg_connect("host=localhost dbname = Proyecto1CC6 user=postgres password = 12345");
 if(!$dbconn) {
 	$msj = new stdClass();
 	$msj->error = "1";
