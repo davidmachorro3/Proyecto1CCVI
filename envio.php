@@ -6,30 +6,26 @@ $direccion = $_GET["direccion"];
 $tienda = $_GET["tienda"];
 
 if(strlen($codigo) == 0 || strlen($destino) == 0 || strlen($destinatario) == 0 || strlen($direccion) == 0 || strlen($tienda) == 0) {
-	echo "<respuesta>\n";
-	echo "\t<error>1</error>\n";
-	echo "</respuesta>\n";
+	$msj = new stdClass();
+	$msj->error = "1";
 	die("Faltan datos de envio");
 }
 
 $dbconn = pg_connect("host=localhost dbname = proyecto1cc6 user=postgres password = 12345");
 if(!$dbconn) {
-	echo "<respuesta>\n";
-	echo "\t<error>1</error>\n";
-	echo "</respuesta>\n";
+	$msj = new stdClass();
+	$msj->error = "1";
 	pg_close($dbconn);
 	die("No fue posible conectarse");
 }
-$query = "INSERT INTO Envio VALUES ($codigo,'$destinatario','$direccion',1,'$tienda','$destino')";
+$query = "INSERT INTO Envio VALUES ('$codigo','$destinatario','$direccion',1,'$tienda','$destino')";
 $result = pg_query($query);
 if(!$result) {
-	echo "<respuesta>\n";
-	echo "\t<error>1</error>\n";
-	echo "</respuesta>\n";
+	$msj = new stdClass();
+	$msj->error = "1";
 } else {
-	echo "<respuesta>\n";
-	echo "\t<error>0</error>\n";
-	echo "</respuesta>\n";
+	$msj = new stdClass();
+	$msj->error = "0";
 }
 pg_close($dbconn); //Avisar si se pudo ingresar la orden o no?
 
