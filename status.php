@@ -10,13 +10,13 @@
     if(strtoupper($formato) == "XML"){
          $xml = new SimpleXMLElement('<orden/>');
          $courrier = $xml->addChild('courrier', "mcqueen");
-         $ord = $xml->addChild('orden', $orden);
-        $query = "SELECT estado from Envio WHERE codigo=$orden AND tienda='$tienda'";
+         $ord = $xml->addChild('orden', strval($orden));
+        $query = "SELECT estado from Envio WHERE codigo='$orden' AND tienda='$tienda'";
         $result = pg_query($query);
         if(pg_num_rows($result) > 0){
         while($line = pg_fetch_assoc($result)){
             $estado = $line["estado"];
-         $est = $xml->addchild('estatus', $estado);
+         $est = $xml->addchild('status', strval($estado));
         }
        
         Header('Content-type: text/xml');
@@ -36,7 +36,7 @@
             $est = $line["estado"];
         }
         $lleva = new stdClass();
-        $lleva->orden = array("courier"=>"mcqueen", "orden"=> intval($orden)  ,"estatus" => intval($est) );
+        $lleva->orden = array("courier"=>"mcqueen", "orden"=>strval($orden)  ,"status" => strval($est));
 
         $json = json_encode($lleva);
         

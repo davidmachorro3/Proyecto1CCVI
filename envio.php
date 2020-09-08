@@ -28,5 +28,4 @@ if(!$result) {
 	$msj->error = "0";
 }
 pg_close($dbconn); //Avisar si se pudo ingresar la orden o no?
-
 ?>
