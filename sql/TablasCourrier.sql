@@ -13,7 +13,7 @@ CREATE TABLE Destino (
 );
 
 CREATE TABLE Envio (
-	codigo int,
+	codigo varchar(50),
 	destinatario varchar(100),
 	direccion varchar(100),
 	estado int,

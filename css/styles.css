@@ -24,6 +24,21 @@
     font-weight: 200;
 }
 
+.parr{
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    text-align: justify;
+}
+
+
+.parrafoss{
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    color: gray;
+}
+
 .titu{
     font-family: 'Oswald', sans-serif;
     text-align: center;
@@ -158,8 +173,21 @@ left: -140px;
 	background-size: cover;
     background-attachment: fixed;
     background-position:  center top;
+    background-position-y: 40px;
     color: #fff;
     
+
+}
+
+.Header6{
+    margin-top: 210px;
+    background:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("../img/cotiz.jpg");
+	height: 550px;
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: #fff;
 
 }
 
@@ -511,4 +539,28 @@ div.icons4 li:first-child .fa::after{
 div.icons4 li:last-child .fa::after{
     width: 95px;
        
+}
+
+
+.card{
+    margin-top: 5%;
+    width: 30%;
+    align-self: center;
+}
+
+.llevamos{
+    padding: 20px;
+}
+
+.Header7{
+    margin-top: 210px;
+    background:linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../img/historia.jpg");
+	height: 550px;
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-position-y: 20px;
+    color: #fff;
+
 }

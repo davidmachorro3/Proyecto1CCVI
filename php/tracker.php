@@ -19,7 +19,7 @@
         <nav class="navbar navbar-light bg-light fixed-top">
             <h4 class="textos">Bienvenido</h4>
             <form class="form-inline" action="./tracker2.php" method="POST">
-              <input class="form-control mr-sm-2" type="search" placeholder="Número de envio" aria-label="Search" name="codigo">
+              <input class="form-control mr-sm-2" type="search" placeholder="Número de envio" aria-label="Search" name="codigo" required>
               <button class="btn btn-outline-dark my-2 my-sm-0" type="submit"><h6 class="textos">Enviar</h6></button>
             </form>
           </nav>
@@ -39,13 +39,13 @@
               <a  data-text="Inicio" href="../index.html">Inicio</a>
             </li> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
             <li class="nav-item">
-              <a data-text="Features" href="#">Features</a>
+              <a data-text="Historia" href="../somos.html">Historia</a>
             </li>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
             <li class="nav-item">
-              <a data-text="Pricing" href="#">Pricing</a>
+              <a data-text="Cotizador" href="cotizador.php">Cotizador</a>
             </li>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
             <li class="nav-item">
-              <a data-text="Disabled" href="#"  >Disabled</a>
+            <a data-text="Portal" href="http://localhost/Admin" >Portal</a>
             </li>
           </ul>
         </div>
@@ -82,7 +82,7 @@
               <br><br><br>
               <div class="row d-flex justify-content-center">
             <?php $Codigo = $_POST["codigo"];   ?>
-              <h1 class="titu">Orden # <?php echo "$Codigo" ?></h1> 
+              <h1 class="titu">Orden #<span style="color:red"><?php echo "$Codigo" ?></span></h1> 
               
             </div>
               <center>
