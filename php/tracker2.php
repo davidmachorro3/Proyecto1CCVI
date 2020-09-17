@@ -114,7 +114,7 @@
           <div class="card">
           <form action="" method="POST" id="formi">
             <div class="form-group" >
-              <label >código</label>
+              <label>Tienda</label>
               <select name="codigo" id="select" class="form-control form-control-sm" required>
                   <option value="">-</option>
     
